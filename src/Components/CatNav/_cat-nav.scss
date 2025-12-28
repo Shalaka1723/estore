@@ -1,0 +1,40 @@
+
+.cat-nav-container{
+  background-color: black;
+  max-width: 100%;
+  border-top: #444444 solid 1px;
+
+  .list-items{
+    list-style: none;
+    display: inline-block;
+    margin: 0.2em 0.4em ;
+    padding: 0.4em;
+    height: 2.5em;
+
+    a{
+      text-decoration: none;
+      color: white;
+      height: 1.8em;
+      font-size: 0.9em;
+      font-weight: 500;
+
+      &::after{
+        content: '';
+        display: block;
+        bottom: 0;
+        left: 0;
+        height: 0.2em;
+        background-color: rgb(80, 69, 69);
+        transform: scaleX(0);
+        transition-property: transform;
+        transition-duration: 0.2s;
+        ;
+      }
+      &:hover{
+        &::after{
+          transform:scaleX(1.1);
+        }
+      }
+    }
+  }
+}
