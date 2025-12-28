@@ -1,3 +1,6 @@
+@import '../../style/sass/variables';
+@import '../../style/sass/mixins';
+
 
 .cat-nav-container{
   background-color: black;
@@ -26,9 +29,7 @@
         height: 0.2em;
         background-color: rgb(80, 69, 69);
         transform: scaleX(0);
-        transition-property: transform;
-        transition-duration: 0.2s;
-        ;
+        @include transition(transform, 0.2s);
       }
       &:hover{
         &::after{
