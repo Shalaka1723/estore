@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import TopNav from './Components/TopNav/TopNav'
 import CatNav from './Components/CatNav/Index'
+import MainComponent from './Components/MainComponent/Index'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <>
       <TopNav/>
       <CatNav/>
+      <MainComponent/>
     </>
   )
 }

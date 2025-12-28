@@ -1,0 +1,23 @@
+
+.side-nav{
+  margin-top: 1em;
+  height: 51em;
+  box-shadow: 1px 0 14px 0 lightgray;
+  border-radius: 1em;
+
+  .individual-category{
+    ul{
+      padding: 0;
+    }
+    .sub-items{
+      text-align: center;
+      margin-bottom: 0.6em;
+      list-style-type: none;
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
