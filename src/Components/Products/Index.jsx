@@ -5,6 +5,8 @@ import shop3 from '../../assets/images/shop/shop-3.jpg';
 import shop4 from '../../assets/images/shop/shop-4.jpg';
 import shop5 from '../../assets/images/shop/shop-5.jpg';
 import shop6 from '../../assets/images/shop/shop-6.jpg';
+import { useSelector } from 'react-redux';
+import productSlice from '../../store/slices/productSlice';
 
 const images = {
   "shop-1.jpg": shop1,
@@ -16,38 +18,8 @@ const images = {
 };
 
 const Products = () => {
-  const productData = [
-    {
-      pName: "Jacket",
-      price: 45,
-      img: "shop-1.jpg"
-    },
-    {
-      pName: "Purse",
-      price: 50,
-      img: "shop-2.jpg"
-    },
-    {
-      pName: "Dress",
-      price: 38,
-      img: "shop-3.jpg"
-    },
-    {
-      pName: "Denim",
-      price: 42,
-      img: "shop-4.jpg"
-    },
-    {
-      pName: "Boots",
-      price: 65,
-      img: "shop-5.jpg"
-    },
-    {
-      pName: "Bag",
-      price: 35,
-      img: "shop-6.jpg"
-    }
-  ]
+
+  const productData = useSelector(productSlice.getInitialState)
 
   return(
     <>
