@@ -6,7 +6,7 @@ import shop4 from '../../assets/images/shop/shop-4.jpg';
 import shop5 from '../../assets/images/shop/shop-5.jpg';
 import shop6 from '../../assets/images/shop/shop-6.jpg';
 import { useSelector } from 'react-redux';
-import productSlice from '../../store/slices/productSlice';
+import productSlice from '../../Redux/Product/productSlice.js';
 
 const images = {
   "shop-1.jpg": shop1,
