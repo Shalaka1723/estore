@@ -7,24 +7,24 @@ const initialState = {
   error: ""
 };
 
-
 const categorySlice = createSlice({
-  name: "Category",
+  name: "category",
   initialState,
-  reducers:{},
-  extraReducers:{
-    [getCategories.pending] : (state,action)=>{
-      state.status = "Loading...";
-    },
-    [getCategories.fulfilled] : (state,action)=>{
-      state.status = "Success";
-      state.categories = action.payload;
-    },
-    [getCategories.rejected] : (state,action)=>{
-      state.status = "Failed!";
-      state.error = action.error.message;
-    }
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(getCategories.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(getCategories.fulfilled, (state, action) => {
+        state.status = "success";
+        state.categories = action.payload;
+      })
+      .addCase(getCategories.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message;
+      });
   }
-})
+});
 
 export default categorySlice.reducer;

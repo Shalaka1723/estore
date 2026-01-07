@@ -8,11 +8,11 @@ const CatNav = () => {
   const categories = useSelector(state=>state.categoryReducer.categories);
   const dispatch = useDispatch();
 
-  useEffect(()=>{
-    dispatch(getCategories)
-  })
+  useEffect(() => {
+    dispatch(getCategories());
+  }, [dispatch]);
 
-  console.log(getCategories);
+  //console.log(getCategories);
 
   return(
     <>
